@@ -2,12 +2,12 @@
 This repository contains example simulations of the calcifier-alkalinity model in Julia. Primarily, note that before running sample simulations, **you must run the "find_periodicity_and_amplitude.jl" file first.** The reason for this is noted below in the descriptions of the various files. The various examples can be run ordinarily as Julia files, and they will produce graphs into the directory in which they are run. The expected output of the files are included as .png files in this repository as well.
 
 The code was created using Julia Version 1.5.3 and DifferentialEquations.jl version 6.16.0.
-# Necessary Libraries
+# Libraries
 1. DifferentialEquations.jl
 2. Plots.jl
-3. PyCall.jl
-4. Statistics.jl
-5. Scipy (used by PyCall.jl)
+3. PyCall.jl (if periodicity/amplitude vs time plots are desired)
+4. Scipy (used by PyCall.jl)
+5. Statistics.jl (for Example Internal and Example Devils Staircase only)
 
 # Find Periodicity and Amplitude
 This code contains a helper function used by the example simulations which uses PyCall to call the Python library Scipy for the `find_peaks` function. It then uses peak data to calculate an array of times, periodicities, and amplitudes to return. 
